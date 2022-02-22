@@ -9,10 +9,10 @@ module.exports = {
       return cadastro.create(morador);
     },
   
-    async pegarPorId(cpf) {
+    async pegarPorId(id) {
       const encontrado = await cadastro.findOne({
         where: {
-          cpf,
+          id,
         },
       });
       if (!encontrado) {
@@ -22,17 +22,17 @@ module.exports = {
       return encontrado;
     },
   
-    atualizar(cpf, dadosParaAtualizar) {
+    atualizar(id, dadosParaAtualizar) {
       return cadastro.update(
         dadosParaAtualizar,
         {
-          where: { cpf },
+          where: { id },
         },
       );
     },
-    remover(cpf) {
+    remover(id) {
       return cadastro.destroy({
-        where: { cpf },
+        where: { id },
       });
     },
   

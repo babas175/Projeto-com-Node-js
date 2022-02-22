@@ -5,13 +5,18 @@ const db = require('../database/db');
 
 const cadastra2  = db.define('cadastroAdm',{
  
-    
+    cpf:{
+        type: Sequelize.STRING,
+        allownull: false,
+    },
+
+
     email:{
         type: Sequelize.STRING,
         allownull: false,
     },
 
-        crachaNumero :{
+    crachaNumero :{
         type: Sequelize.STRING,
         allownull: false,
     },

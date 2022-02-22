@@ -46,7 +46,7 @@ class CadastroAction {
 
     async atualizar() {
         await CadastroService.pegarPorId(this.id);
-        const campos = [ 'email', 'boloc', 'apartamento', 'celular', 'data_de_cadastro','nome'];
+        const campos = [ 'cpf','email', 'boloc', 'apartamento', 'celular', 'data_de_cadastro','nome'];
         const dadosParaAtualizar = {};
     
         campos.forEach((campo) => {
@@ -67,7 +67,7 @@ class CadastroAction {
   }
     
   validar() {
-    const campos = [ 'email', 'bloco', 'apartamento', 'celular','nome', 'data_de_cadastro'];
+    const campos = ['cpf', 'email', 'bloco', 'apartamento', 'celular','nome', 'data_de_cadastro'];
 
     campos.forEach((campo) => {
       const valor = this[campo];

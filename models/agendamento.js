@@ -4,10 +4,12 @@ const db = require('../database/db');
 
 
 const reservacao = db.define('agendamento',{
-    cpf: {
-        type: Sequelize.INTEGER,
+    
+    cpf:{
+        type: Sequelize.STRING,
         allownull: false,
     },
+
 
     email:{
         type: Sequelize.STRING,
